@@ -10,3 +10,10 @@
 .datepicker-popover .tip-inner {
   border: none;
 }
+.datepicker-popover .popover-content {
+  padding: 0;
+}
+.datepicker-popover .calendar-table {
+  margin: 0;
+}
+

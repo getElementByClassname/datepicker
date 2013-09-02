@@ -46,9 +46,9 @@ Datepicker.prototype.onclick = function(e){
 
 Datepicker.prototype.onchange = function(date){
   this.el.value = date.getFullYear()
-    + '/'
-    + date.getMonth()
-    + '/'
+    + '-'
+    + (date.getMonth()+1)
+    + '-'
     + date.getDate();
 
   this.popover.remove();
