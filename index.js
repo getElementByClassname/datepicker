@@ -6,6 +6,7 @@
 var Calendar = require('calendar')
   , Popover = require('popover')
   , event = require('event')
+  , d3 = require('d3')
 
 /**
  * Expose `Datepicker`.
@@ -45,12 +46,7 @@ Datepicker.prototype.onclick = function(e){
  */
 
 Datepicker.prototype.onchange = function(date){
-  this.el.value = date.getFullYear()
-    + '-'
-    + (date.getMonth()+1)
-    + '-'
-    + date.getDate();
-
+  this.el.value = d3.time.format("%Y-%m-%d")(date)
   this.popover.remove();
   this.popover = null;
 };
